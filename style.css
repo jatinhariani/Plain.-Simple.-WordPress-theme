@@ -14,9 +14,10 @@ License URI:
 */
 
 /* CSS Document */
-.sticky
+.sticky, .post.sticky, .page.sticky
 {
-	
+	padding: 5px;
+	border: 1px solid #ccc;
 }
 .gallery-caption
 {
@@ -212,10 +213,14 @@ img
 {
 	background-image: url(images/rss.png);
 }
-#searchform
+#site-header #searchform
 {
 	float: right;
+}
+#searchform
+{
 	border: 1px solid #000;
+	width: 214px;
 }
 #searchform *
 {
@@ -226,8 +231,8 @@ img
 {
 	border: none;
 	height: 18px;
-	padidng: 0;
 	padding: 3px;
+	width: 180px;
 }
 #searchsubmit
 {
@@ -252,7 +257,14 @@ img
 }
 
 /*content styles*/
-.post
+.page-header h1
+{
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.post, .page
 {
 	  border-bottom: 1px solid #ccc;
 	  padding: 0 0 15px 0;
@@ -262,10 +274,10 @@ img
 {
 	font-size: 24px;
 	line-height: 30px;
+	font-weight: bold;
 }
 .entry-title a
 {
-	font-weight: bold;
 	color: #111;
 }
 .entry-title a:hover
@@ -440,6 +452,7 @@ img.avatar
 	line-height: 30px;
 	font-weight: bold;
 	margin-bottom: 12px;
+	margin-top: 0;
 }
 
 /*footer styles*/

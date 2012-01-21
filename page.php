@@ -6,9 +6,9 @@
                 <?php the_post(); ?>
             	<?php get_template_part('article'); ?>
                 <?php endwhile; ?>
-                <?php get_template_part('page-navigation'); ?>
+                <?php comments_template(); ?>
                 <?php else:
-				get_template_part('article-notfound'); ?>
+				?>
                 <?php endif; ?>
             </div>
             <?php get_sidebar(); ?>

@@ -6,7 +6,19 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/grid.css" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
 <title>
-<?php bloginfo('name'); ?>
+<?php
+if(is_404())
+{
+	echo '404 Error: ';
+}
+?>
+<?php wp_title('|',true,'right'); ?><?php bloginfo('name'); ?>
+<?php if(is_home() || is_front_page())
+{
+	echo " | ";
+	bloginfo('description');
+}
+?>
 </title>
 <?php wp_head(); ?>
 </head>
